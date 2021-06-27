@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<title>Task2</title>
+</head>
+<body class="container bg-success text-white">
+	<div>
+		<center><h5>Login</h5></center>
+		<form action="{% url 'task2' %}" method="post">
+			{% csrf_token %}
+			<div class="form-group">
+				<label for="name">User Name:</label>
+				<input type="text" name="urname" class="form-control" id="name" placeholder="Enter Your Name">
+			</div>
+			<div class="form-group">
+				<label for="fname">Password:</label>
+				<input type="password" name="pasw" class="form-control" id="psw" placeholder="Enter Your Password">
+			</div>
+			<center><input type="submit" class="btn btn-warning" name="submit" value="Submit"></center>
+		</form>
+	</div>
+	
+</body>
+</html>

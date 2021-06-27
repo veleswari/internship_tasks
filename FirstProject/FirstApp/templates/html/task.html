@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<title>bstaks</title>
+</head>
+<body class="container bg-info p-3 text-white">
+	<div class="container">
+		<center><h2>Registration Form</h2></center>
+		<form action="{% url 'task' %}" method="post">
+			{% csrf_token %}
+			<div class="form-group">
+				<label for="fname">First Name:</label>
+				<input type="text" name="fname" class="form-control" id="fname" placeholder="Enter Your First Name">
+			</div>
+			<div class="form-group">
+				<label for="lname">Last Name:</label>
+				<input type="text" name="lname" class="form-control" id="lname" placeholder="Enter Your Last Name">
+			</div>
+			<div class="form-group">
+				<label for="email">Email:</label>
+				<input type="email" name="email" class="form-control" id="email" placeholder="Enter Your Last Email Id">
+			</div>
+			<div class="form-group">
+				<label for="pno">Mobile No.:</label>
+				<input type="tel" name="pno" class="form-control" id="pno" placeholder="Enter Your Mobile Number">
+			</div>
+			<div>Gender:</div>
+			<div class="form-check-inline">
+				<label class="form-check-label">
+					<input type="radio" class="form-check-input" name="gender" value="male">Male
+				</label>
+				<label class="form-check-label">
+					<input type="radio" class="form-check-input" name="gender" value="female">Female
+				</label>
+				<label class="form-check-label">
+					<input type="radio" class="form-check-input" name="gender" value="other">Other
+				</label>
+			</div>
+			<div class="form-group">
+				<label for="add">Address:</label>
+				<textarea class="form-control" rows="5" id="add"></textarea>
+			</div>
+
+			<div>Languages Known:</div>
+			<div class="form-check-inline">
+				<label class="form-check-label">
+					<input type="checkbox" name="check" value="Telugu">Telugu
+				</label>
+			</div>
+			<div class="form-check-inline">
+				<label class="form-check-label">
+					<input type="checkbox" name="check" value="English">English
+				</label>
+			</div>
+			<div class="form-check-inline">
+				<label class="form-check-label">
+					<input type="checkbox" name="check" value="Hindi">Hindi
+				</label>
+			</div>
+			<div class="form-check-inline">
+				<label class="form-check-label">
+					<input type="checkbox" name="check" value="Tamil">Tamil
+				</label>
+			</div><br>
+			<center><input type="submit" class="btn btn-primary" name="submit" value="Submit"></center>
+		</form>
+	</div>
+
+</body>
+</html>
